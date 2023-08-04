@@ -30,11 +30,12 @@ def main():
     print(" 1. Check In")
     print(" 2. Check Out")
     ch = int(input("Enter your choice :"))
-    if(ch ==1):
-        checkin()
-    elif(ch == 2):
-        checkout()
-    else:
-        print("Select correct option")
-        main()
+    
+    match ch:
+        case 1: checkin()
+        case 2: checkout()
+        case _ :
+            print("Select correct option. ")
+            main()
+                        
 main()
